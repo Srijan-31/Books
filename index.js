@@ -84,7 +84,7 @@ app.get("/books/:bookTitle", async (req,res)=>{
         }
     }catch(error){
         console.log(error)
-        res.status(500).json({erro: "Failed to fetch the Book."})
+        res.status(500).json({error: "Failed to fetch the Book."})
     }
 })
 
@@ -123,7 +123,7 @@ async function readBookByGenre(genre){
 app.get("/books/genre/:genreName", async (req,res)=>{
     try{
         const book=await readBookByGenre(req.params.genreName)
-        if(book.lenth!==0){
+        if(book.length!==0){
             res.json(book)
         }else{
             res.status(404).json({error: "Book not found."})
