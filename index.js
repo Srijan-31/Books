@@ -7,7 +7,7 @@ app.use(express.json())
 
 const cors = require("cors");
 const corsOptions = {
-  origin: "https://books-frontend-navy.vercel.app/",
+  origin: "*",
   credentials: true,
   optionSuccessStatus: 200,
 };
